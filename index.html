@@ -1,16 +1,43 @@
 <html>
     <head>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    
+    <meta charset="UTF-8">
     </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
+    <body onload="show_slider_value();">
+        
+        <div id="outer_box">
+        <h1>Simple Interest Calculator</h1><br>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+        <div id="inner_box" class="container">
+        <label>Amount</label> 
+        <input type="number" value=0 id="principal">  <br/><br>
+        <label>Interest Rate</label> <input type="range" placeholder="0.00" min=0 max="20.00" step="0.1" id="rate" value="10.5"> 
+        <span id="rate_display"></span> <br/><br>
+        
+        <label>No. of Years</label>
+        <select id="years">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+        </select><br><br>
+        
+        <button onclick="compute()">Compute Interest</button><br/>
 
-        <button onclick="compute()">Compute</button>
+        <pre id="result" hidden>If you deposit <mark id="val1"></mark>,
+at an interest rate of <mark id="val2"></mark>.
+You will recieve an amount of <mark id="val3"></mark>,
+in the year <mark id="val4"></mark></pre>
+
+        </div>
+
+        <p>Everyone Can Get Rich</p>
+
+        </div>
+
+        <link rel="stylesheet" href="style.css">
     </body>
 </html>
