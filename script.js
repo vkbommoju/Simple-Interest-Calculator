@@ -9,12 +9,21 @@ function compute()
     
     interest=t*p*ir/100 // interest amount 
 
+    
     document.getElementById("val1").innerHTML = p;
     document.getElementById("val2").innerHTML = ir+'%';
     document.getElementById("val3").innerHTML = interest;
     document.getElementById("val4").innerHTML = future;
-    document.getElementById("result").hidden=false; //changing attribute of id=result
-    
+
+    //input validation
+    if(p<=0){
+        alert("Enter a positive number")
+        document.getElementById("principal").focus();        
+    }
+    else{
+        document.getElementById("result").hidden=false; //changing attribute of id=result
+    }
+
 }
 
 function show_slider_value(){
