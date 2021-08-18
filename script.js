@@ -9,7 +9,6 @@ function compute()
     
     interest=t*p*ir/100 // interest amount 
 
-    
     document.getElementById("val1").innerHTML = p;
     document.getElementById("val2").innerHTML = ir+'%';
     document.getElementById("val3").innerHTML = interest;
@@ -18,7 +17,8 @@ function compute()
     //input validation
     if(p<=0){
         alert("Enter a positive number")
-        document.getElementById("principal").focus();        
+        document.getElementById("principal").focus();
+        document.getElementById("result").hidden=true; //changing attribute of id=result
     }
     else{
         document.getElementById("result").hidden=false; //changing attribute of id=result
