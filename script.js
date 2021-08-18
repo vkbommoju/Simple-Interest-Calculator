@@ -16,9 +16,9 @@ function compute()
 
     //input validation
     if(p<=0){
+        document.getElementById("result").hidden=true; //changing attribute of id=result
         alert("Enter a positive number")
         document.getElementById("principal").focus();
-        document.getElementById("result").hidden=true; //changing attribute of id=result
     }
     else{
         document.getElementById("result").hidden=false; //changing attribute of id=result
